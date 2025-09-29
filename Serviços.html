@@ -1,0 +1,78 @@
+<!DOCTYPE html> <!-- Define que o documento segue o padrão HTML5 -->
+<html lang="pt-br"> <!-- Raiz do documento, idioma principal português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Usa codificação de caracteres UTF-8 (suporta acentos) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o site se ajustar à largura da tela em dispositivos móveis -->
+    <title>Finds</title> <!-- Título que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Arquivo de estilos CSS externo -->
+</head>
+<body>
+    <!-- ========= INÍCIO DO HEADER ========= -->
+    <header class="header"> <!-- Cabeçalho do site -->
+        <nav class="navbar"> <!-- Barra de navegação -->
+            <a href="#" class="logo">🔍 Finds</a> <!-- Logotipo/Marca do site -->
+            <ul class="nav-menu"> <!-- Lista de links de navegação -->
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="Sobre.html" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="Serviços.html" class="nav-link">Serviços</a></li>
+                <li class="nav-item"><a href="Contato.html" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ========= FIM DO HEADER ========= -->
+
+    <main> <!-- Conteúdo principal da página -->
+        <div class="form-container"> <!-- Contêiner do formulário -->
+            <h2>Envie Sua Avaliação</h2>
+            <form action="#" method="post"> <!-- Formulário que envia dados via POST -->
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome"
+                           placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="Titulo">Titulo:</label>
+                    <!-- OBS: type="email" aqui parece um erro, provavelmente deveria ser "text"
+                         para título. -->
+                    <input type="email" id="email" name="email"
+                           placeholder="Gostei muito..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem"
+                              placeholder="Deixe sua mensagem aqui..." required></textarea>
+                </div>
+
+                <button type="submit">Enviar</button> <!-- Botão de envio do formulário -->
+            </form>
+        </div>
+    </main>
+
+    <!-- ========= INÍCIO DO RODAPÉ ========= -->
+    <!-- Importa ícones do Font Awesome para uso nas redes sociais -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <footer class="site-footer"> <!-- Rodapé do site -->
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Texto de direitos autorais -->
+                <p class="copyright-text">
+                    &copy; 2025 Finds. Todos os direitos reservados.
+                </p>
+
+                <!-- Ícones de redes sociais -->
+                <ul class="social-icons">
+                    <li><a href="#" aria-label="Link para o Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="Link para o Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" aria-label="Link para o Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="Link para o LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+    </html>

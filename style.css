@@ -1,0 +1,216 @@
+/* --- Estilos Gerais e Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo total da largura/altura */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão da página */
+    background-color: #f4f4f4;      /* Cor de fundo suave */
+    line-height: 1.6;               /* Altura da linha para melhorar a leitura */
+}
+
+main {
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço disponível */
+    min-height: 85vh; /* Garante que o main tenha ao menos 85% da altura da tela */
+}
+
+a {
+    color: white;         /* Cor dos links padrão (afeta o menu de navegação) */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+/* --- HEADER e NAVEGAÇÃO --- */
+.header {
+    background-color: #2c3e50;                /* Fundo azul-escuro */
+    padding: 1rem 2rem;                       /* Espaço interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);  /* Sombra sutil para dar profundidade */
+    position: sticky;  /* Fixa o header no topo da página ao rolar */
+    top: 0;
+    z-index: 1000;     /* Garante que o header fique acima de outros elementos */
+}
+
+.navbar {
+    display: flex;                   /* Layout em linha (logo + menu) */
+    justify-content: space-between;   /* Espaça logo à esquerda e menu à direita */
+    align-items: center;
+    max-width: 1200px;                /* Largura máxima do conteúdo */
+    margin: 0 auto;                   /* Centraliza horizontalmente */
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;  /* Remove os marcadores de lista */
+    display: flex;     /* Links em linha */
+    gap: 25px;         /* Espaço entre os itens */
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out; /* Transição suave da cor ao hover */
+}
+
+.nav-link:hover {
+    color: #1abc9c; /* Cor verde ao passar o mouse */
+}
+
+/* --- CONTAINER e COLUNAS --- */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;  /* Espaço vertical e centralização horizontal */
+    padding: 0 2rem;    /* Margem interna lateral */
+    display: flex;      /* Exibe colunas lado a lado */
+    gap: 2rem;          /* Espaço entre colunas */
+}
+
+.column {
+    flex: 1;                              /* Cada coluna ocupa a mesma largura */
+    background-color: #ffffff;            /* Fundo branco */
+    padding: 1.5rem;                       /* Espaçamento interno */
+    border-radius: 8px;                     /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Sombra leve */
+}
+
+.column h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+/* --- FORMULÁRIO (Contato/Avaliação) --- */
+.form-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;          /* Ajusta a largura para 80% em telas grandes */
+    max-width: 400px;    /* Limite máximo para não ficar muito largo */
+    margin: 0 auto;      /* Centraliza na tela */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espaço entre os campos do formulário */
+}
+
+label {
+    display: block;      /* Coloca o rótulo acima do campo */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s; /* Suaviza a mudança de cor da borda no foco */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Borda azul quando o campo está em foco */
+    outline: none;         /* Remove a borda padrão do navegador */
+}
+
+textarea {
+    height: 120px;
+    resize: vertical; /* Permite que o usuário aumente/diminua a altura */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Tom mais escuro no hover */
+}
+
+/* --- RODAPÉ --- */
+.site-footer {
+    background-color: #26272b; /* Fundo escuro */
+    color: #8f8f8f;           /* Texto em cinza claro */
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    position: sticky; /* Mantém o rodapé visível se o conteúdo for curto */
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Texto de um lado, ícones do outro */
+    align-items: center;
+    flex-wrap: wrap; /* Quebra em linhas em telas menores */
+}
+
+.copyright-text {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #8f8f8f;
+    font-size: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #fff; /* Ícones ficam brancos ao passar o mouse */
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    /* Barra de navegação empilhada */
+    .navbar {
+        flex-direction: column; /* Logo em cima, menu embaixo */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    /* Colunas em uma única linha vertical */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Rodapé: itens centralizados */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 20px; /* Espaço entre texto e ícones */
+    }
+}
